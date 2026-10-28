@@ -1,0 +1,1 @@
+const {HttpError}=require('../lib/errors');function validate(schema,source='body'){return(req,res,next)=>{const p=schema.safeParse(req[source]);if(!p.success)return next(new HttpError(422,'Please check the highlighted fields.','VALIDATION_ERROR',p.error.flatten()));req[source]=p.data;next()}}module.exports={validate};

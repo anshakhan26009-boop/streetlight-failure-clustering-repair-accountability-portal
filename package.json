@@ -1,0 +1,25 @@
+{
+  "name": "streetlight-accountability-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Civic streetlight failure reporting and repair accountability",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "check": "node --check src/server.js && node --check src/public/app.js && node --check src/routes/reports.js",
+    "seed:demo": "node src/seed-demo.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "express-rate-limit": "^7.5.0",
+    "zod": "^3.24.2"
+  }
+}
